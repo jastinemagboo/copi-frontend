@@ -97,7 +97,6 @@ export default function Copi() {
 
       const res = await axios[method](url, payload);
 
-      // Optional: check response status
       if (res.status >= 200 && res.status < 300) {
         closeModal();
         await fetchPosts(); // Reload posts after submit
@@ -177,6 +176,15 @@ export default function Copi() {
           />
         ))}
 
+        <StoryModal
+          show={showModal}
+          isEdit={isEdit}
+          form={form}
+          onChange={handleChange}
+          onClose={closeModal}
+          onSubmit={handleSubmit}
+        />
+
         {totalPosts > postsPerPage && (
           <div className="mt-4 flex w-full justify-center">
             <div className="flex w-full max-w-3xl justify-end space-x-2">
@@ -218,15 +226,6 @@ export default function Copi() {
             </div>
           </div>
         )}
-
-        <StoryModal
-          show={showModal}
-          isEdit={isEdit}
-          form={form}
-          onChange={handleChange}
-          onClose={closeModal}
-          onSubmit={handleSubmit}
-        />
       </div>
     </>
   );

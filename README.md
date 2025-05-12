@@ -120,3 +120,15 @@ To run the app locally, simply execute the following command using bash:
 **4.** Run the web app
 
 - npm run dev
+
+---
+
+## UI Design
+
+- Desktop View
+  ![Banner](./public/desktop_view.png)
+  ![Banner](./public/desktop_story_modal.png)
+
+- Mobile View
+  ![Banner](./public/mobile_view.png)
+  ![Banner](./public/mobile_story_modal.png)
